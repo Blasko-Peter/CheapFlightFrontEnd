@@ -1,4 +1,24 @@
-h2 {
-    margin: 0;
-    color: white;
+#cities{
+    display: flex;
+    padding: 50px 0;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.city {
+    width: 50%;
+    margin: 0 50px;
+}
+
+#dates{
+    display: flex;
+    padding: 20px 0;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+#search-button{
+    padding: 20px 0;
+    background: rgba(0,0,0,.4);
+    text-align: center;
 }
