@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     background: url('../images/cheapflight-bg.jpg') no-repeat center center fixed; 
@@ -5,8 +9,15 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: relative;
+    height: 100%;
 }
 
 * {
     box-sizing: border-box;
+}
+
+#search-container {
+    position: absolute;
+    bottom: 0;
 }
