@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.uploadCities("http://localhost:8000/getAllCities")
+    this.uploadCities("http://localhost:8000/getData")
   }
 
   uploadCities = (url) => {
