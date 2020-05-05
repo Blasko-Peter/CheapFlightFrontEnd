@@ -8,13 +8,13 @@ function Search(props) {
         <div id="search-container">
             <div id="cities">
                 <div className="city">
-                    <select className="browser-default custom-select">
+                    <select name="startTown" className="browser-default custom-select" onChange={props.handleChange} value={props.startTown}>
                     <option>Choose your start city</option>
                     {allcities}
                     </select>
                 </div>
                 <div className="city">
-                    <select className="browser-default custom-select">
+                    <select name="arriveTown" className="browser-default custom-select" onChange={props.handleChange} value={props.arriveTown}>
                     <option>Choose your target city</option>
                     {allcities}
                     </select>

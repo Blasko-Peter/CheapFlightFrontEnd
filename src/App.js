@@ -8,7 +8,9 @@ class App extends Component {
     super()
     this.state = {
       loading: false,
-      cities: []
+      cities: [],
+      startTown: "",
+      arriveTown: "",
     }
   }
 
@@ -28,8 +30,16 @@ class App extends Component {
         })
   }
 
+  handleChange = (event) => {
+    const {name, value} = event.target
+    this.setState({[name]:value})
+  }
+
+
   render() {
-    const Searching = <Search cities={this.state.cities} />
+    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} />
+    console.log(this.state.startTown)
+    console.log(this.state.arriveTown)
     return (
       <div>
         <Navbar />
