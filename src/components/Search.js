@@ -39,7 +39,7 @@ function Search(props) {
                 </div>
             </div>
             <div id="search-button">
-                <MDBBtn color="warning">Search</MDBBtn>
+                <MDBBtn color="warning" onClick={props.searchFlights}>Search</MDBBtn>
             </div>
         </div>
     )
