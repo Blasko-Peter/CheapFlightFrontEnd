@@ -11,7 +11,8 @@ class App extends Component {
       cities: [],
       startTown: "",
       arriveTown: "",
-      startTime: ""
+      startTime: "",
+      flights: []
     }
   }
 
@@ -53,7 +54,11 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        this.setState({
+          loading: false,
+          flights: data
+        })
+        console.log(this.state.flights)
       })
   }
 
