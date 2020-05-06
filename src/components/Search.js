@@ -22,20 +22,7 @@ function Search(props) {
             </div>
             <div id="dates">
                 <div className="city">
-                    <select className="browser-default custom-select">
-                    <option>Choose your start city</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    </select>
-                </div>
-                <div className="city">
-                    <select className="browser-default custom-select">
-                    <option>Choose your target city</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    </select>
+                    <input type="date" name="startTime" value={props.startTime} onChange={props.handleChange} /> 
                 </div>
             </div>
             <div id="search-button">

@@ -11,6 +11,7 @@ class App extends Component {
       cities: [],
       startTown: "",
       arriveTown: "",
+      startTime: ""
     }
   }
 
@@ -40,6 +41,7 @@ class App extends Component {
     const data = {
       startTown: this.state.startTown,
       arriveTown: this.state.arriveTown,
+      startTime: this.state.startTime
     }
     fetch("http://localhost:8000/getData", {
       method: "POST",
@@ -57,7 +59,7 @@ class App extends Component {
 
 
   render() {
-    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} searchFlights={this.searchFlights} />
+    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.searchFlights} />
     console.log(this.state.startTown)
     console.log(this.state.arriveTown)
     return (
