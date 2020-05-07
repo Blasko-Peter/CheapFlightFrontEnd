@@ -9,24 +9,28 @@ function Search(props) {
             <div id="cities">
                 <div className="city">
                     <select name="startTown" className="browser-default custom-select" onChange={props.handleChange} value={props.startTown}>
-                    <option>Choose your start city</option>
+                    <option value="">Choose your start city</option>
                     {allcities}
                     </select>
                 </div>
                 <div className="city">
                     <select name="arriveTown" className="browser-default custom-select" onChange={props.handleChange} value={props.arriveTown}>
-                    <option>Choose your target city</option>
+                    <option value="">Choose your target city</option>
                     {allcities}
                     </select>
                 </div>
             </div>
             <div id="dates">
-                <div className="city">
-                    <input type="date" name="startTime" value={props.startTime} onChange={props.handleChange} /> 
+                <div className="date-container">
+                    <div className="date-row">
+                        <div className="date-box">
+                            <input id="date" type="date" name="startTime" value={props.startTime} onChange={props.handleChange} />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="search-button">
-                <MDBBtn color="warning" onClick={props.searchFlights}>Search</MDBBtn>
+                {(props.startTown === "" || props.arriveTown === "" || props.startTime === "") ? <h2>Add all parameters</h2> : <MDBBtn id="search-btn" color="warning" onClick={props.searchFlights}>Search</MDBBtn>}
             </div>
         </div>
     )

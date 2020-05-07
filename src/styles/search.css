@@ -22,3 +22,40 @@
     background: rgba(0,0,0,.4);
     text-align: center;
 }
+
+#search-btn {
+    margin: 0;
+    height: 50px;
+}
+
+h2 {
+ color: orange;
+ margin: 0;
+ height: 50px;
+}
+
+.date-container {
+    width: 100%;
+}
+
+.date-row {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.date-box {
+    margin: 0 50px;
+}
+
+#date {
+    border-width: 1px;
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    width: 100%;
+}
