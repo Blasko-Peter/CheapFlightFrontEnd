@@ -24,7 +24,7 @@ function Search(props) {
                 <div className="date-container">
                     <div className="date-row">
                         <div className="date-box">
-                            <input id="date" type="date" name="startTime" value={props.startTime} onChange={props.handleChange} />
+                            <input id="date" type="text" placeholder="Choose your start date" onFocus = {props.onFocus} name="startTime" value={props.startTime} onChange={props.handleChange} />
                         </div>
                     </div>
                 </div>

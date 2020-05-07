@@ -62,9 +62,13 @@ class App extends Component {
       })
   }
 
+  onFocus = (e) => {
+    e.target.type = "date"
+  }
+
 
   render() {
-    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.searchFlights} />
+    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.searchFlights} onFocus={this.onFocus} />
     console.log(this.state.startTown)
     console.log(this.state.arriveTown)
     return (
