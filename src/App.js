@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./styles/app.css";
 import Navbar from "./components/Navbar";
 import Search from './components/Search';
+import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 
 class App extends Component {
   constructor(){
@@ -12,7 +13,8 @@ class App extends Component {
       startTown: "",
       arriveTown: "",
       startTime: "",
-      flights: []
+      flights: [],
+      modal: false
     }
   }
 
@@ -62,19 +64,43 @@ class App extends Component {
       })
   }
 
+  checkedStartAndArriveTowns = () => {
+    this.state.startTown === this.state.arriveTown ? this.checkedCities() : this.searchFlights()
+  }
+
+  checkedCities = () => {
+    this.toggle()
+  }
+
   onFocus = (e) => {
     e.target.type = "date"
   }
 
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
 
   render() {
-    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.searchFlights} onFocus={this.onFocus} />
-    console.log(this.state.startTown)
-    console.log(this.state.arriveTown)
+    const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.checkedStartAndArriveTowns} onFocus={this.onFocus} />
     return (
       <div>
         <Navbar />
         {Searching}
+        <MDBContainer>
+          <MDBModal isOpen={this.state.modal} toggle={this.toggle} centered>
+            <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
+            <MDBModalBody>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </MDBModalBody>
+            <MDBModalFooter>
+              <MDBBtn color="warning" onClick={this.toggle}>OK</MDBBtn>
+            </MDBModalFooter>
+          </MDBModal>
+        </MDBContainer>
       </div>
     );
   }
