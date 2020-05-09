@@ -1,5 +1,7 @@
-*{
-    z-index: 1;
+#search-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
 
 #cities{

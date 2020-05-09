@@ -1,0 +1,16 @@
+#table-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, .4);
+    margin: 0;
+}
+
+.table {
+    margin: 0;
+}
+
+#new-search {
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}

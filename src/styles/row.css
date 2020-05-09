@@ -1,0 +1,12 @@
+.row-design {
+    color: limegreen;
+}
+
+.row-design:hover {
+    color: white;
+    background: orange;
+}
+
+.data-center {
+    text-align: center;
+}

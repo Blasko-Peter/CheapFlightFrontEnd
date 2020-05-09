@@ -16,9 +16,3 @@ body {
 * {
     box-sizing: border-box;
 }
-
-#search-container {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-}
