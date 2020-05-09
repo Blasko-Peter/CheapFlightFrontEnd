@@ -1,3 +1,7 @@
+*{
+    z-index: 1;
+}
+
 #cities{
     display: flex;
     padding: 50px 0;
