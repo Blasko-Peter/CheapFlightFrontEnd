@@ -13,7 +13,7 @@ function Table(props) {
                 </MDBTableBody>
             </MDBTable>
             <div id="new-search">
-                <MDBBtn id="new-search-btn" color="warning">New Search</MDBBtn>
+                <MDBBtn id="new-search-btn" color="warning" onClick={props.newSearch} >New Search</MDBBtn>
             </div>
         </div>
         
