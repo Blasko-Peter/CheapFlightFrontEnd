@@ -94,7 +94,7 @@ class App extends Component {
  
   render() {
     const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.checkedStartAndArriveTowns} onFocus={this.onFocus} />
-    const FlightsTable = <Table flights={this.state.flights} newSearch={this.newSearch} />
+    const FlightsTable = <Table flights={this.state.flights} newSearch={this.newSearch} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} />
     const FlightsSearch = this.state.flights.length === 0 ? Searching : FlightsTable
     return (
       <div>
