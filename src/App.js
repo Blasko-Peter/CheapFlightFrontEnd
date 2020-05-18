@@ -47,7 +47,7 @@ class App extends Component {
       arriveTown: this.state.arriveTown,
       startTime: this.state.startTime
     }
-    fetch("http://localhost:8000/getData", {
+    fetch("http://localhost:8000/selenium", {
       method: "POST",
       headers: {
         'Accept': 'application/json',
