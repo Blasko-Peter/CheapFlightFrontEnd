@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Search from './components/Search';
 import Modal from "./components/Modal";
 import Table from "./components/Table";
+import Loading from "./components/Loading";
 
 class App extends Component {
   constructor(){
@@ -96,10 +97,11 @@ class App extends Component {
     const Searching = <Search cities={this.state.cities} handleChange={this.handleChange} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} searchFlights={this.checkedStartAndArriveTowns} onFocus={this.onFocus} />
     const FlightsTable = <Table flights={this.state.flights} newSearch={this.newSearch} startTown={this.state.startTown} arriveTown={this.state.arriveTown} startTime={this.state.startTime} />
     const FlightsSearch = this.state.flights.length === 0 ? Searching : FlightsTable
+    const Screen = this.state.loading ? <Loading /> : FlightsSearch
     return (
       <div>
         <Navbar />
-        {FlightsSearch}
+        {Screen}
         <Modal modal={this.state.modal} toggle={this.toggle} />
       </div>
     );

@@ -1,0 +1,14 @@
+.loading-container {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, .4);
+    margin: 0;
+    text-align: center;
+}
+
+.loading-text {
+    margin: 0;
+    padding: 100px 50px;
+    color: orange;
+}
